@@ -1,15 +1,15 @@
 
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Alert1 from './components/Alert1';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
 import React ,{useState} from 'react'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 function App() {
   const [mode , setMode] = useState('light')
@@ -41,15 +41,17 @@ function App() {
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
+        <Navbar title="TextUtils1" about="About Us" mode={mode} toggleMode={toggleMode} />
         <Alert1 alert={alert} />
-        <Routes>
-          <Route exact path="/about" element={<About />} /> { /*path do partial maching for complete and accurate maching is done by exact path*/} 
-          <Route exact path="/" element={<Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />} />
-        </Routes>
-      </Router>
+        {/* <Routes> */}
+          {/* <Route exact path="/about" element={<About />} />  path do partial maching for complete and accurate maching is done by exact path */}
+          <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
+        {/* </Routes>
+      </Router> */}
     </>
   );
 }    
 
 export default App;
+
