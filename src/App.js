@@ -42,7 +42,6 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar title="TextUtils" about="About Us" mode={mode} toggleMode={toggleMode} />
         <Alert1 alert={alert} />
         <Routes>
           <Route exact path="/about" element={<About />} /> { /*path do partial maching for complete and accurate maching is done by exact path*/} 
